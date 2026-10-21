@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: qwen-server
+    runtime: docker
+    plan: pro # 4GB RAM, needed for Qwen2.5-3B Q4
+    healthCheckPath: /health
+    envVars:
+      - key: LLAMA_API_KEY
+        sync: false # set this in the Render dashboard
