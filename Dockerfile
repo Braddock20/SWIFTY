@@ -1,6 +1,6 @@
 # Stage 1: download the model once at build time
 FROM curlimages/curl:latest AS model
-ARG MODEL_URL=https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/main/qwen2.5-3b-instruct-q4_k_m.gguf
+ARG MODEL_URL=https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf
 RUN curl -L --fail -o /tmp/model.gguf "$MODEL_URL"
 
 # Stage 2: llama.cpp server
